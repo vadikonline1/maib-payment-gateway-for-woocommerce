@@ -65,6 +65,10 @@ function maib_payment_gateway_init()
 
     class MaibPaymentGateway extends WC_Payment_Gateway
     {
+        // Definirea proprietăților 
+        public $route_return_ok;
+        public $route_return_fail;
+        public $route_callback;
         #region Constants
         const MAIB_MOD_ID = 'maib';
         const MAIB_MOD_TITLE = 'Maib Payment Gateway';
