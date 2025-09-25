@@ -1241,12 +1241,7 @@ function maib_payment_gateway_init()
     
     function enqueue_payment_gateway_styles()
     {
-        // Get the version of your plugin from the plugin header
-        $plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ) );
-        $plugin_version = $plugin_data['Version'];
-    
-        // Enqueue the custom CSS file with the plugin version
-        wp_enqueue_style('payment-gateway-styles', MAIB_GATEWAY_PLUGIN_URL . 'assets/css/style.css', array(), $plugin_version);
+        wp_enqueue_style('payment-gateway-styles', MAIB_GATEWAY_PLUGIN_URL . 'assets/css/style.css', array());
     }
 
     #region Admin init
